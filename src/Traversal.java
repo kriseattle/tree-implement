@@ -18,6 +18,11 @@ public class Traversal {
 
     System.out.println("Pre-order: ");
     preOrder(root);
+    System.out.println();
+
+    System.out.println("Post-order: ");
+    postOrder(root);
+    System.out.println();
 
   }
 
@@ -43,6 +48,14 @@ public class Traversal {
    search right
    print data
    */
+  public static void postOrder(TreeNode current){
+
+    if (current == null) return;
+    preOrder(current.left);
+    preOrder(current.right);
+    System.out.println(current.data);
+  }
+  
 
 
    /** IN - ORDER
